@@ -1,9 +1,11 @@
-import { Text } from "./styles";
+import { Text } from "../Text/Text";
 
 export default function Header() {
   return (
     <>
-      <Text>Header</Text>
+      <Text size={22} weight="700">
+        Starting Radiao
+      </Text>
     </>
   );
 }
