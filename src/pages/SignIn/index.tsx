@@ -1,22 +1,17 @@
-import { Text, Button } from "react-native";
+import { Text, Button, Image } from "react-native";
 import { ContainerView } from "../../components/Container/styles";
 
-export function SignIn({ navigation }) {
+import { Logo } from "./styles";
+
+export function SignIn({ navigation }: any) {
   return (
     <ContainerView>
-      <Text>Sign In Page</Text>
-      <Button
+      <Logo source={require("../../assets/icons/Icon.png")} />
+      <Text>Radião</Text>
+      {/* <Button
         title="Ir para Sign Up"
         onPress={() => navigation.navigate("SignUp")}
-      />
-      <Button
-        title="Ir para Reset Password"
-        onPress={() => navigation.navigate("ResetPassword")}
-      />
-      <Button
-        title="Ir para Home"
-        onPress={() => navigation.navigate("Home")}
-      />
+      /> */}
     </ContainerView>
   );
 }
