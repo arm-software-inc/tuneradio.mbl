@@ -6,31 +6,26 @@ import {
   StyledTextInput,
   StyledLabel,
   StyledDiv,
-  StyledButton,
-  StyledButtonText,
   StyledCheckbox,
   StyledCheckboxDiv,
   StyledCheckboxText,
-  StyledButtonGoogle,
-  StyledTextGoogle,
-  StyledTextAppleId,
-  StyledButtonAppleId,
-  Divisor,
   StyledTextAction,
   StyledDivAction,
 } from "./styles";
 
 import { useForm, Controller } from "react-hook-form";
 
+import { Button } from "../../components/Button";
+import { Divisor } from "../../components/Divisor";
+import { Checkbox } from "../../components/Forms/Checkbox";
+
 export function SignIn({ navigation }: any) {
   const {
     control,
-    handleSubmit,
     formState: { errors },
   } = useForm();
 
-  function onSubmit(data: any) {
-    console.log(data);
+  function onSubmit() {
     navigation.navigate("SignUp");
   }
 
@@ -75,24 +70,30 @@ export function SignIn({ navigation }: any) {
       />
       {errors.password && <Text>Invalid password.</Text>}
 
-      <StyledCheckboxDiv>
-        <StyledCheckbox />
-        <StyledCheckboxText>Remember me</StyledCheckboxText>
-      </StyledCheckboxDiv>
+      <Checkbox text="Remember me" />
 
-      <StyledButton onPress={handleSubmit(onSubmit)} title="Sign In">
-        <StyledButtonText>Sign In</StyledButtonText>
-      </StyledButton>
+      <Button
+        backgroundColor="#ffec74"
+        label="Sign In"
+        color="#303030"
+        handleSubmit={onSubmit}
+      />
 
-      <StyledButtonGoogle onPress={handleSubmit(onSubmit)} title="Sign In">
-        <StyledTextGoogle>Sign In with Google</StyledTextGoogle>
-      </StyledButtonGoogle>
+      <Button
+        backgroundColor="#fff"
+        label="Sign In with Google"
+        color="#303030"
+        handleSubmit={onSubmit}
+      />
 
-      <StyledButtonAppleId onPress={handleSubmit(onSubmit)} title="Sign In">
-        <StyledTextAppleId>Sign with Apple Id</StyledTextAppleId>
-      </StyledButtonAppleId>
+      <Button
+        backgroundColor="#000"
+        label="Sign In with Apple Id"
+        color="#fff"
+        handleSubmit={onSubmit}
+      />
 
-      <Divisor />
+      <Divisor backgroundColor="#303030" />
 
       <StyledDivAction>
         <StyledTextAction>Don't have an account? Sign Up</StyledTextAction>
