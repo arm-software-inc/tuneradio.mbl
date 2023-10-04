@@ -1,3 +1,5 @@
+import { Text } from "react-native";
+
 export function SignUp() {
-  return "Hello World";
+  return <Text>Sign Up</Text>;
 }

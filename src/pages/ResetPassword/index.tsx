@@ -1,3 +1,5 @@
+import { Text } from "react-native";
+
 export function ResetPassword() {
-  return "Hello World";
+  return <Text>Reset Password</Text>;
 }
