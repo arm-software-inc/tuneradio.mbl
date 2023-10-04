@@ -1,8 +1,14 @@
-import { PersonalizedButton, PersonalizedText } from "./styles";
+import {
+  ButtonWrapper,
+  PersonalizedButton,
+  Logo,
+  PersonalizedText,
+} from "./styles";
 
 interface ButtonProps {
   backgroundColor: string;
   color: string;
+  logoURL?: string;
   label: string;
   handleSubmit: () => void;
 }
@@ -10,12 +16,16 @@ interface ButtonProps {
 export function Button({
   backgroundColor,
   color,
+  logoURL,
   label,
   handleSubmit,
 }: ButtonProps) {
   return (
-    <PersonalizedButton style={{ backgroundColor }} onPress={handleSubmit}>
-      <PersonalizedText style={{ color }}>{label}</PersonalizedText>
-    </PersonalizedButton>
+    <ButtonWrapper>
+      <PersonalizedButton style={{ backgroundColor }} onPress={handleSubmit}>
+        {logoURL && <Logo source={logoURL} />}
+        <PersonalizedText style={{ color }}>{label}</PersonalizedText>
+      </PersonalizedButton>
+    </ButtonWrapper>
   );
 }
