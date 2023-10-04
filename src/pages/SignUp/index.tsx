@@ -1,12 +1,5 @@
-import { Text } from "../../components/Text/Text";
-import { ContainerView } from "../../components/Container/styles";
+import { Text } from "react-native";
 
 export function SignUp() {
-  return (
-    <ContainerView>
-      <Text size={22} weight="700">
-        Sign Up Page
-      </Text>
-    </ContainerView>
-  );
+  return <Text>Sign Up</Text>;
 }
