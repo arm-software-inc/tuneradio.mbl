@@ -5,6 +5,9 @@ import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
 import { ResetPassword } from "./pages/ResetPassword";
 import { Home } from "./pages/Home";
+import { Search } from "./pages/Search";
+import { Favorites } from "./pages/Favorites";
+import { Settings } from "./pages/Settings";
 
 const Stack = createStackNavigator();
 
@@ -12,7 +15,7 @@ export function Routes() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="SignIn">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
             name="SignIn"
             component={SignIn}
@@ -31,6 +34,21 @@ export function Routes() {
           <Stack.Screen
             name="Home"
             component={Home}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Search"
+            component={Search}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Favorites"
+            component={Favorites}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Settings"
+            component={Settings}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
