@@ -2,13 +2,14 @@ import { useForm, Controller } from "react-hook-form";
 
 import {
   Logo,
-  ContainerView,
   StyledDiv,
   Title,
   StyledTextInputWrapper,
   StyledTextInput,
   StyledLabel,
 } from "./styles";
+
+import { ContainerView } from "../../assets/styles/ContainerView";
 
 import { Button } from "../../components/Button";
 import { Divisor } from "../../components/Divisor";

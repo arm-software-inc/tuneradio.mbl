@@ -10,7 +10,7 @@ interface ButtonProps {
   color: string;
   logoURL?: string;
   label: string;
-  handleSubmit: () => void;
+  handleSubmit?: () => void;
 }
 
 export function Button({
